@@ -82,6 +82,11 @@ picture {
   display: block;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
 
 html {
   font-size: 62.5%; // =10px
@@ -97,6 +102,7 @@ body {
   text-align: left;
   background: $color-bg;
   color: $color-text;
+  font-weight: 400;
 }
 
 html,
@@ -106,14 +112,7 @@ body {
   -ms-text-size-adjust:100%;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-
-// links
+// Links
 a {
   color: $color-link;
   background: transparent;
@@ -213,6 +212,7 @@ th {
 input,
 textarea,
 select,
+optgroup,
 button {
   color: inherit;
   font-family: inherit;
@@ -278,24 +278,40 @@ html input[disabled] {
   cursor: default;
 }
 
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+[type='button']::-moz-focus-inner,
+[type='reset']::-moz-focus-inner,
+[type='submit']::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
+[role='button'] {
+  cursor: pointer;
+}
+
 select {
   word-wrap: normal;
+  cursor: pointer;
 }
 
 input[type='search'] {
   -webkit-appearance: textfield;
   outline-offset: -2px;
+  border-radius: 0;
+  padding: 0;
 }
 
 [type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-[tabindex='-1']:focus:not(:focus-visible) {
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+[tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
 }

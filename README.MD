@@ -6,6 +6,6 @@
 
 `$ npm start`
 
-### Production version
+### Build & minify files
 
-`$ npm run dev`
+`$ npm run build`

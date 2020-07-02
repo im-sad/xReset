@@ -27,7 +27,7 @@ const path = {
       style: 'src/style/*.scss'
   },
   watch: {
-      html: 'src/**/index.pug',
+      html: 'src/**/*.pug',
       style: 'src/style/**/*.scss'
   },
   clean: 'build'
@@ -82,7 +82,7 @@ function css(done) {
 }
 
 function cssMin(done) {
-  gulp.src(path.build.style)
+  gulp.src(path.src.style)
   .pipe(plumber())
   .pipe(sass())
   .pipe(postcss([ autoprefixer() ]))
@@ -103,9 +103,8 @@ function watchFiles(done) {
 }
 
 
-const build = gulp.series(clean, html, css, webserver, watchFiles);
-const buildProd = gulp.series(cssMin);
+const start = gulp.series(clean, html, css, webserver, watchFiles);
+const build = gulp.series(clean, html, css, cssMin);
 
-
-exports.default = build;
-exports.dev = buildProd;
+exports.default = start;
+exports.build = build;

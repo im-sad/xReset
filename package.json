@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "gulp",
-    "dev": "gulp dev"
+    "build": "gulp build"
   },
   "description": "global reset styles",
   "dependencies": {},
