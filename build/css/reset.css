@@ -1,0 +1,358 @@
+@-ms-viewport
+{
+    width: device-width;
+}
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+img,
+em,
+strike,
+strong,
+s,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+main
+{
+    font-size: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    vertical-align: baseline; 
+
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+nav,
+section,
+main,
+menu,
+picture
+{
+    display: block;
+}
+
+html
+{
+    font-size: 62.5%;
+
+    box-sizing: border-box; 
+
+    -webkit-tap-highlight-color: transparent;
+    -webkit-backface-visibility: hidden;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -ms-overflow-style: scrollbar;
+}
+
+body
+{
+    font: 16px/1.5 'Trebuchet MS', 'Helvetica CY', sans-serif;
+
+    text-align: left;
+
+    color: #000; 
+    background: #fff;
+}
+
+html,
+body
+{
+    height: 100%;
+
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: inherit;
+}
+
+a
+{
+    font-size: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    transition: color .5s;
+    vertical-align: baseline;
+
+    color: red;
+    background: transparent;
+
+    -webkit-text-decoration-skip: spaces;
+            text-decoration-skip: spaces;
+    -webkit-text-decoration-skip: objects;
+            text-decoration-skip: objects;
+}
+
+a:focus
+{
+    outline: thin dotted;
+}
+
+a:hover
+{
+    transition-duration: .2s; 
+
+    color: blue;
+}
+
+a:hover,
+a:active
+{
+    outline: 0;
+}
+
+a,
+area,
+button,
+input:not([type='range']),
+label,
+select,
+textarea,
+.btn
+{
+    touch-action: manipulation;
+}
+
+ol,
+ul
+{
+    list-style: none;
+}
+
+img
+{
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    vertical-align: middle; 
+
+    border-style: none;
+}
+
+b,
+strong
+{
+    font-weight: 700;
+}
+
+svg
+{
+    overflow: hidden;
+
+    vertical-align: middle;
+}
+
+audio,
+video
+{
+    display: inline-block;
+}
+
+audio:not([controls])
+{
+    display: none;
+
+    height: 0;
+}
+
+[hidden]
+{
+    display: none;
+}
+
+table
+{
+    max-width: 100%;
+
+    empty-cells: show; 
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    background-color: transparent;
+}
+
+td,
+td img
+{
+    vertical-align: top;
+}
+
+th
+{
+    text-align: inherit;
+}
+
+input,
+textarea,
+select,
+button
+{
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.25;
+
+    margin: 0;
+
+    vertical-align: baseline;
+
+    color: inherit;
+    border-radius: 0;
+}
+
+textarea
+{
+    overflow: auto;
+
+    resize: vertical; 
+    vertical-align: top;
+}
+
+input
+{
+    line-height: normal;
+}
+
+input[type='checkbox'],
+input[type='radio']
+{
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type='checkbox']
+{
+    vertical-align: baseline;
+}
+
+input[type='radio']
+{
+    vertical-align: text-bottom;
+}
+
+button,
+label,
+input[type='button'],
+input[type='submit'],
+input[type='reset']
+{
+    cursor: pointer;
+}
+
+button,
+select
+{
+    text-transform: none;
+}
+
+button,
+input
+{
+    overflow: visible;
+}
+
+button,
+html input[type='button'],
+input[type='reset'],
+input[type='submit']
+{
+    cursor: pointer; 
+
+    -webkit-appearance: button;
+}
+
+button[disabled],
+html input[disabled]
+{
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner
+{
+    padding: 0; 
+
+    border: 0;
+}
+
+select
+{
+    word-wrap: normal;
+}
+
+input[type='search']
+{
+    outline-offset: -2px; 
+
+    -webkit-appearance: textfield;
+}
+
+[type='search']::-webkit-search-decoration
+{
+    -webkit-appearance: none;
+}
+
+[tabindex='-1']:focus:not(:focus-visible)
+{
+    outline: 0 !important;
+}
