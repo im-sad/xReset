@@ -59,7 +59,7 @@ function clean(done) {
 
 // Собираем HTML
 function html(done) {
-  gulp.src(path.src.html)
+  gulp.src(path.src.html, { nodir: true })
   .pipe(plumber())
   .pipe(pug())
   .pipe(gulp.dest(path.build.html))
@@ -70,29 +70,21 @@ function html(done) {
 
 // Собираем CSS
 function css(done) {
-  gulp.src(path.src.style)
+  gulp.src(path.src.style, { nodir: true })
   .pipe(plumber())
   .pipe(sass())
   .pipe(postcss([ autoprefixer() ]))
   .pipe(csscomb())
   .pipe(gulp.dest(path.build.css))
-  .pipe(reload({stream: true}));
 
-  done();
-}
-
-function cssMin(done) {
-  gulp.src(path.src.style)
-  .pipe(plumber())
-  .pipe(sass())
-  .pipe(postcss([ autoprefixer() ]))
   .pipe(cleanCSS())
   .pipe(rename({ suffix: '.min' }))
   .pipe(gulp.dest(path.build.css))
-  .pipe(reload({stream: true}));
 
+  .pipe(reload({stream: true}));
   done();
 }
+
 
 // Следим за изменениями
 function watchFiles(done) {
@@ -104,7 +96,7 @@ function watchFiles(done) {
 
 
 const start = gulp.series(clean, html, css, webserver, watchFiles);
-const build = gulp.series(clean, html, css, cssMin);
+const build = gulp.series(clean, html, css);
 
 exports.default = start;
 exports.build = build;
