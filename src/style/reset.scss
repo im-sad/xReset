@@ -1,5 +1,17 @@
 @import './_vars';
 
+:root {
+  --color-text: $color-text;
+  --color-link: $color-link;
+  --color-link-hover: $color-link-hover;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
 @-ms-viewport {
   width: device-width;
 }
@@ -100,7 +112,7 @@ html {
 body {
   font: #{$font-base-size}/#{$font-base-lh} $font-family;
   text-align: left;
-  background: $color-bg;
+  background-color: $color-bg;
   color: $color-text;
   font-weight: 400;
 }
@@ -110,6 +122,7 @@ body {
   height: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust:100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 // Links
@@ -185,7 +198,7 @@ audio:not([controls]) {
 }
 
 [hidden] {
-  display: none;
+  display: none !important;
 }
 
 
@@ -285,6 +298,7 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
+  border-style: none;
 }
 
 [role='button'] {
@@ -314,4 +328,8 @@ input[type='search'] {
 
 [tabindex="-1"]:focus:not(:focus-visible) {
   outline: 0 !important;
+}
+
+input[placeholder] {
+  text-overflow: ellipsis;
 }
