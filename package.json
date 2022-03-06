@@ -1,6 +1,11 @@
 {
   "name": "xreset",
   "version": "1.0.0",
+  "keywords": [
+    "css",
+    "global reset",
+    "styles"
+  ],
   "scripts": {
     "start": "gulp",
     "build": "gulp build"
