@@ -1,7 +1,6 @@
 {
-  "name": "x_reset",
+  "name": "xreset",
   "version": "1.0.0",
-  "private": true,
   "scripts": {
     "start": "gulp",
     "build": "gulp build"
@@ -21,7 +20,6 @@
     "gulp-sass": "^5.1.0",
     "sass": "^1.49.9"
   },
-  "main": "index.js",
   "repository": "git@github.com:im-sad/xReset.git",
   "author": "im-sad <im-sad@ya.ru>",
   "license": "MIT"
