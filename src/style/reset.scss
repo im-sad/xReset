@@ -133,23 +133,23 @@ a {
   margin: 0;
   padding: 0;
   vertical-align: baseline;
-  text-decoration-skip: spaces;
+  text-decoration-skip: spaces objects;
+  text-underline-offset: 0.2em;
   transition: color 0.5s;
-  text-decoration-skip: objects;
-}
 
-a:focus {
-  outline: thin dotted;
-}
+  &:focus {
+    outline: thin dotted;
+  }
 
-a:hover {
-  color: $color-link-hover;
-  transition-duration: 0.2s;
-}
+  &:hover {
+    color: $color-link-hover;
+    transition-duration: 0.2s;
+  }
 
-a:hover,
-a:active {
-  outline: 0;
+  &:hover,
+  &:active {
+    outline: 0;
+  }
 }
 
 a,
