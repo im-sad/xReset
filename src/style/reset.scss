@@ -1,9 +1,9 @@
 @import './_vars';
 
 :root {
-  --color-text: $color-text;
-  --color-link: $color-link;
-  --color-link-hover: $color-link-hover;
+  --color-text: #{$color-text};
+  --color-link: #{$color-link};
+  --color-link-hover: #{$color-link-hover};
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -107,6 +107,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -ms-overflow-style: scrollbar;
   box-sizing: border-box;
+  overscroll-behavior: none;
 }
 
 body {
